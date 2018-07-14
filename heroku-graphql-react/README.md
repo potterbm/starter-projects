@@ -1,1 +1,1 @@
-# Frissky
+# Herok-GraphQL-React
