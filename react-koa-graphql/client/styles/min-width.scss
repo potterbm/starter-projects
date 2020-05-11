@@ -1,0 +1,28 @@
+$breakpoints: (
+  tablet: 768px,
+  desktop: 1024px,
+);
+
+@mixin max-width($value) {
+  @if (map-has-key($breakpoints, $value)) {
+    @media (max-width: map-get($breakpoints, $value)) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $value) {
+      @content;
+    }
+  }
+}
+
+@mixin min-width($value) {
+  @if (map-has-key($breakpoints, $value)) {
+    @media (min-width: map-get($breakpoints, $value)) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $value) {
+      @content;
+    }
+  }
+}

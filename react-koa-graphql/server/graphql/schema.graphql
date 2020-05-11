@@ -1,0 +1,41 @@
+module.exports = `
+
+schema {
+  mutation: Mutation
+  query: Query
+}
+
+type Mutation {
+  login(user: AuthInput!): AuthResponse!
+}
+
+input AuthInput {
+  email: String!
+  firstName: String
+  lastName: String
+  phoneNumber: String
+  password: String!
+}
+
+type Query {
+  ping: Boolean!
+}
+
+type AuthResponse {
+  jwt: String
+  message: String
+  redirect: String
+  status: Boolean!
+  user: User
+}
+
+type User {
+  email: String!
+  firstName: String
+  id: ID!
+  lastName: String
+  phoneNumber: String
+  role: String!
+}
+
+`;

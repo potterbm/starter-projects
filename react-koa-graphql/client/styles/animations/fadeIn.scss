@@ -1,0 +1,15 @@
+@keyframes fadeIn {
+  0% {
+    // filter: blur(4px);
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@mixin fadeIn($duration: 2s, $delay: 0s) {
+  animation: fadeIn 2s cubic-bezier(0.22, 1, 0.36, 1) $delay;
+  animation-fill-mode: both;
+}

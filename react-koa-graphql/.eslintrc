@@ -1,0 +1,16 @@
+{
+  "parser": "babel-eslint",
+
+  "plugins": ["prettier", "jsx-control-statements", "react"],
+
+  "extends": ["airbnb", "plugin:jsx-control-statements/recommended", "prettier"],
+
+  "rules": {
+    "react/jsx-filename-extension": 0
+  },
+
+  "env": {
+    "mocha": true,
+    "browser": true
+  }
+}
